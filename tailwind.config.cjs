@@ -6,7 +6,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        scale: {
+          '0%': { transform: 'scale(4)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        animation: {
+          scale: 'scale 5s ease-in-out infinite',
+        }
+      }
+    },
   },
   plugins: [],
 }

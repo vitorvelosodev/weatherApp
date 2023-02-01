@@ -8,14 +8,24 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        scale: {
-          '0%': { transform: 'scale(4)' },
-          '100%': { transform: 'scale(1)' },
+        scrolling: {
+          '0%': { translate: '-100%', opacity: '0' },
+          '50%': { opacity: '0.1' },
+          '100%': { translate: '100%', opacity: '0' },
         },
-        animation: {
-          scale: 'scale 5s ease-in-out infinite',
+        scrollingDelay: {
+          '0%': { translate: '-100%', opacity: '0' },
+          '50%': { opacity: '0.08' },
+          '100%': { translate: '100%', opacity: '0' },
         }
+      },
+      animation: {
+        scrolling: 'scrolling 15s linear infinite',
+        scrollingDelay: 'scrollingDelay 18s 3500ms linear infinite',
       }
+    },
+    fontFamily: {
+      'custom': ['Raleway', 'sans-serif'],
     },
   },
   plugins: [],

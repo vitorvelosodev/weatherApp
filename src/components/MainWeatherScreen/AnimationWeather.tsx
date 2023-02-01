@@ -43,11 +43,16 @@ export default function AnimationWeather(props: AnimationProps) {
 
   const animationElement:string = objWeatherImg[key as keyof typeof objWeatherImg]
 
-  // const element
-
   return (
     <>
-      <img src={objWeatherImg.CloudBackground} className='absolute top-28 opacity-10 ' />
+      {
+        animationElement !== Clear ?
+          <div className='absolute h-full overflow-hidden'>
+            <img src={objWeatherImg.CloudBackground} className='relative top-28 opacity-10 scale-150 overflow-x-hidden animate-scrolling' />
+            <img src={objWeatherImg.CloudBackground} className='relative top-[-70px] opacity-0 scale-110 overflow-x-hidden animate-scrollingDelay' />
+          </div>
+          : ''
+      }
       <img src={animationElement} alt="Weather image" />
     </>
   )

@@ -1,0 +1,741 @@
+{
+  "location": {
+      "name": "New York",
+      "region": "New York",
+      "country": "United States of America",
+      "lat": 40.71,
+      "lon": -74.01,
+      "tz_id": "America/New_York",
+      "localtime_epoch": 1677341211,
+      "localtime": "2023-02-25 11:06"
+  },
+  "current": {
+      "temp_c": -3.9,
+      "is_day": 1,
+      "condition": {
+          "text": "Overcast",
+          "code": 1009
+      },
+      "feelslike_c": -6.7,
+      "uv": 1.0
+  },
+  "forecast": {
+      "forecastday": [
+          {
+              "date": "2023-02-25",
+              "day": {
+                  "maxtemp_c": -0.8,
+                  "mintemp_c": -6.2,
+                  "totalsnow_cm": 2.21,
+                  "daily_will_it_rain": 1,
+                  "daily_chance_of_rain": 74,
+                  "daily_will_it_snow": 0,
+                  "daily_chance_of_snow": 6,
+                  "condition": {
+                      "text": "Moderate or heavy snow showers",
+                      "icon": "//cdn.weatherapi.com/weather/64x64/day/371.png",
+                      "code": 1258
+                  }
+              },
+              "astro": {
+                  "is_moon_up": 1,
+                  "is_sun_up": 0
+              },
+              "hour": [
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  }
+              ]
+          },
+          {
+              "date": "2023-02-26",
+              "day": {
+                  "maxtemp_c": 9.8,
+                  "mintemp_c": -3.7,
+                  "totalsnow_cm": 0.0,
+                  "daily_will_it_rain": 0,
+                  "daily_chance_of_rain": 0,
+                  "daily_will_it_snow": 0,
+                  "daily_chance_of_snow": 0,
+                  "condition": {
+                      "text": "Cloudy",
+                      "icon": "//cdn.weatherapi.com/weather/64x64/day/119.png",
+                      "code": 1006
+                  }
+              },
+              "astro": {
+                  "is_moon_up": 1,
+                  "is_sun_up": 0
+              },
+              "hour": [
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  }
+              ]
+          },
+          {
+              "date": "2023-02-27",
+              "day": {
+                  "maxtemp_c": 5.6,
+                  "mintemp_c": -0.5,
+                  "totalsnow_cm": 5.27,
+                  "daily_will_it_rain": 1,
+                  "daily_chance_of_rain": 87,
+                  "daily_will_it_snow": 0,
+                  "daily_chance_of_snow": 0,
+                  "condition": {
+                      "text": "Moderate rain",
+                      "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png",
+                      "code": 1189
+                  }
+              },
+              "astro": {
+                  "is_moon_up": 1,
+                  "is_sun_up": 0
+              },
+              "hour": [
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  }
+              ]
+          },
+          {
+              "date": "2023-02-28",
+              "day": {
+                  "maxtemp_c": 5.7,
+                  "mintemp_c": 0.9,
+                  "totalsnow_cm": 0.0,
+                  "daily_will_it_rain": 1,
+                  "daily_chance_of_rain": 89,
+                  "daily_will_it_snow": 0,
+                  "daily_chance_of_snow": 3,
+                  "condition": {
+                      "text": "Heavy rain",
+                      "icon": "//cdn.weatherapi.com/weather/64x64/day/308.png",
+                      "code": 1195
+                  }
+              },
+              "astro": {
+                  "is_moon_up": 1,
+                  "is_sun_up": 0
+              },
+              "hour": [
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  }
+              ]
+          },
+          {
+              "date": "2023-03-01",
+              "day": {
+                  "maxtemp_c": 7.9,
+                  "mintemp_c": 0.9,
+                  "totalsnow_cm": 0.0,
+                  "daily_will_it_rain": 0,
+                  "daily_chance_of_rain": 0,
+                  "daily_will_it_snow": 0,
+                  "daily_chance_of_snow": 0,
+                  "condition": {
+                      "text": "Sunny",
+                      "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                      "code": 1000
+                  }
+              },
+              "astro": {
+                  "is_moon_up": 1,
+                  "is_sun_up": 0
+              },
+              "hour": [
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  },
+                  {
+                      "condition": {
+                          
+                      }
+                  }
+              ]
+          }
+      ]
+  }
+}

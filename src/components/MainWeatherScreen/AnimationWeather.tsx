@@ -1,6 +1,7 @@
 import weatherCodesJSON from './../../scripts/weatherCodes.json'
 import weatherAnimation from './../../scripts/weatherAnimation.json'
 import Clear from '/weather-img/Clear.png'
+import ClearNight from '/weather-img/ClearNight.png'
 import CloudBackground from '/weather-img/Cloud-background.png'
 import Hail from '/weather-img/Hail.png'
 import HeavyCloud from '/weather-img/HeavyCloud.png'
@@ -14,10 +15,11 @@ import 'animate.css'
 
 type AnimationProps = {
   weatherCode: number;
+  isDay: number;
 }
 
 export default function AnimationWeather(props: AnimationProps) {
-  const { weatherCode } = props
+  const { weatherCode, isDay } = props
 
   const objWeatherImg = {
     Clear,
@@ -32,16 +34,21 @@ export default function AnimationWeather(props: AnimationProps) {
     Thunderstorm
   }
 
-  const weatherDescription = weatherCodesJSON.codes.condition.filter(code => code.code === weatherCode)[0].description
+  // const weatherDescription = weatherCodesJSON.codes.condition.filter(code => code.code === weatherCode)[0].description
   
+  // function getIcon() {
+  //   const animation = Object.entries(weatherAnimation).filter(entry => entry[0] === weatherDescription)
+  //   return animation[0][1]
+  // }
+
   function getIcon() {
-    const animation = Object.entries(weatherAnimation).filter(entry => entry[0] === weatherDescription)
-    return animation[0][1]
+    const animation = weatherCodesJSON.codes.condition.filter(code => code.code === weatherCode)[0].animation
+    return animation
   }
 
-  const key = getIcon()
+  const animationIcon = getIcon()
 
-  const animationElement:string = objWeatherImg[key as keyof typeof objWeatherImg]
+  const animationElement:string = objWeatherImg[animationIcon as keyof typeof objWeatherImg]
 
   return (
     <>
@@ -53,7 +60,7 @@ export default function AnimationWeather(props: AnimationProps) {
           </div>
           : ''
       }
-      <img src={animationElement} alt="Weather image" />
+      <img src={isDay === 1 ? animationElement : (animationElement === Clear ? ClearNight : animationElement)} alt="Weather image" className='place-self-center'/>
     </>
   )
 }

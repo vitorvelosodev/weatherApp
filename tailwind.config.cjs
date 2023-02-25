@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable quotes */
 /** @type {import('tailwindcss').Config} */
 module.exports = {

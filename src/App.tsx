@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { fetchApiData } from './scripts/api-request'
-import dataStd from './scripts/data.json'
-import weatherCodes from './scripts/weatherCodes.json'
+import dataStd from './scripts/newAPIresponse.json'
 import MainWeatherScreen from './components/MainWeatherScreen/MainWeatherScreen'
+import { Context } from './context/Context'
 
 function App() {
   const [ data , setData ] = useState(dataStd)
-  // console.log(data)
 
   const [ render, setRender ] = useState(false)
 
   const allWeatherData = () => {    
     const location = data.location.name
-    const temperature = data.current.temperature
-    const weatherCode = data.current.weather_code
-    const weatherDescription = data.current.weather_descriptions
+    const temperature = data.current.temp_c
+    const weatherCode = data.current.condition.code
+    const weatherDescription = data.current.condition.text
     const isDay = data.current.is_day
-    const feelsLike = data.current.feelslike
+    const feelsLike = data.current.feelslike_c
 
     return (
       {
@@ -25,30 +24,28 @@ function App() {
         weatherCode,
         weatherDescription,
         isDay,
-        feelsLike
+        feelsLike,
       }
     )
   }
 
+  const { city } = useContext(Context)
+
+  const call = async () => {
+    setData(await fetchApiData(city))
+    setRender(true)
+  }
+
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_API_KEY
-    // const URL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=Goiania`
-    const call = async () => {
-      // const response = await fetchApiData(URL)
-      // console.log(response)
-      // setData(response.data)
-      setData(dataStd)
-      setRender(true)
-    }
     call()
-  }, [])
+  }, [city])
 
   return (
     <>
-      { render &&
-        <MainWeatherScreen
-          {...allWeatherData()}
-        />
+      { render &&   
+          <MainWeatherScreen
+            {...allWeatherData()}
+          />
       }
     </>
   )

@@ -1,7 +1,12 @@
 import axios from 'axios'
+// import responseData from './newAPIresponse.json'
 
-export async function fetchApiData(URL:string) {
+const apiKey = import.meta.env.VITE_API_KEY
+
+export async function fetchApiData(city : string) {
+  const URL = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
   const response = await axios.get(URL)
-  return response
-  
+  // console.log(response.data)
+  // const response = responseData
+  return response.data
 }

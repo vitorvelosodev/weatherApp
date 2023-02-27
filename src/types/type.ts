@@ -8,6 +8,6 @@ export type TCity = {
   iso3: string;
   admin_name: string;
   capital: string;
-  population: number;
+  population: null | number;
   id: string;
 }

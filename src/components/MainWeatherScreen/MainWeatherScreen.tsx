@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import AnimationWeather from './AnimationWeather'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import LocationMenu from '../LocationMenu/LocationMenu'
 
 

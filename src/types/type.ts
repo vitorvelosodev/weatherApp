@@ -9,5 +9,5 @@ export type TCity = {
   admin_name: string;
   capital: string;
   population: null | number;
-  id: string;
+  id: number | string;
 }

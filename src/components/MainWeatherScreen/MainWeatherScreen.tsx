@@ -32,7 +32,7 @@ export default function MainWeatherScreen(props: WeatherProps) {
   }
 
   return (
-    <main className={`grid place-content-center h-screen gap-2 text-center overflow-x-hidden max-w-lg relative ${backgroundColor}`}>
+    <main className={`grid place-content-center h-[100dvh] gap-2 text-center overflow-x-hidden max-w-lg relative ${backgroundColor}`}>
       <button
         onClick={handleSideMenu}
         className='absolute px-4 py-2 bg-cyan-800 text-white rounded-sm shadow top-4 left-4 z-20'

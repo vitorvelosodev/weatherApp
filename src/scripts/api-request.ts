@@ -4,7 +4,7 @@ import axios from 'axios'
 const apiKey = import.meta.env.VITE_API_KEY
 
 export async function fetchApiData(city : string) {
-  const URL = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
+  const URL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
   const response = await axios.get(URL)
   // console.log(response.data)
   // const response = responseData

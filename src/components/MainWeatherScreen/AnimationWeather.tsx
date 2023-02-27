@@ -1,5 +1,4 @@
 import weatherCodesJSON from './../../scripts/weatherCodes.json'
-import weatherAnimation from './../../scripts/weatherAnimation.json'
 import Clear from '/weather-img/Clear.png'
 import ClearNight from '/weather-img/ClearNight.png'
 import CloudBackground from '/weather-img/Cloud-background.png'

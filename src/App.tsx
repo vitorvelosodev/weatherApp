@@ -33,6 +33,7 @@ function App() {
 
   const call = async () => {
     setData(await fetchApiData(city))
+    // setData(await fetch('/.netlify/functions/apiRequestServer'))
     setRender(true)
   }
 

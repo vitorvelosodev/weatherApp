@@ -1,7 +1,7 @@
 import { SyntheticEvent, useContext, useState } from 'react'
 import { Context } from '../../context/Context'
 import worldCityListJSON from './../../cities/worldcities.json'
-import ICity from './../../types/type'
+import { TCity } from './../../types/type'
 
 type PropsMenu = {
   open: boolean;
@@ -15,7 +15,7 @@ export default function LocationMenu(props: PropsMenu) {
 
   const [ cityList, setCityList ] = useState<string[]>([])
   const [ inputCity, setInputCity ] = useState<string>('')
-  const [ searchList, setSearchList ] = useState<null | ICity[]>(null)
+  const [ searchList, setSearchList ] = useState<null | TCity[]>(null)
 
   const handleCityChange = (event: SyntheticEvent) => {
     const target = event.target as Element
@@ -26,8 +26,8 @@ export default function LocationMenu(props: PropsMenu) {
     const { value } = event.target
     setInputCity(value)
     setTimeout(() => {
-      const worldCityList = worldCityListJSON as Array<ICity>
-      const worldCities : object[] = worldCityList.filter(city => {
+      const worldCityList = worldCityListJSON as Array<TCity>
+      const worldCities = worldCityList.filter(city => {
         const cityElement = city.city_ascii
         const search = value
         return cityElement.toLowerCase().includes(search.toLowerCase())
@@ -70,7 +70,7 @@ export default function LocationMenu(props: PropsMenu) {
           <div className='absolute w-full bg-slate-600 mx-auto'>
             { 
               searchList
-                ? (searchList.map((city : ICity, i : number) => {
+                ? (searchList.map((city : TCity, i : number) => {
                   if (i > 4) {
                     return ''
                   }

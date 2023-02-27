@@ -1,4 +1,4 @@
-export default type ICity{
+export type TCity = {
   city: string;
   city_ascii: string;
   lat: number;

@@ -11,3 +11,33 @@ export type TCity = {
   population: null | number;
   id: number | string;
 }
+
+export type Tforecastday = {
+  date: string;
+  day: {
+      maxtemp_c: number;
+      mintemp_c: number;
+      totalsnow_cm: number;
+      daily_will_it_rain: number;
+      daily_chance_of_rain: number;
+      daily_will_it_snow: number;
+      daily_chance_of_snow: number;
+      condition: object;
+  };
+};
+
+export type Tforecast = {
+  date: string;
+  day: {
+      maxtemp_c: number;
+      mintemp_c: number;
+      totalsnow_cm: number;
+      daily_will_it_rain: number;
+      daily_chance_of_rain: number;
+      daily_will_it_snow: number;
+      daily_chance_of_snow: number;
+      condition: object;
+  };
+  astro?: object;
+  hour?: object[];
+}

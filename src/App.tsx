@@ -55,18 +55,22 @@ function App() {
   }, [city])
 
   return (
-    <>
+    <div
+      className='custom:grid custom:grid-cols-2 place-items-center w-full max-w-6xl'
+    >
       { render &&  
         <>
           <MainWeatherScreen
             { ...allWeatherDataMain() }
           />
-          <Forecast
-            forecast={ allForecast() }
-          />
+          <div className='grid place-items-center bg-[#100E1D] h-full w-full'>
+            <Forecast
+              forecast={ allForecast() }
+            />
+          </div>
         </>
       }
-    </>
+    </div>
   )
 }
 

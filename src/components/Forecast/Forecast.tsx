@@ -69,7 +69,7 @@ export default function Forecast({ forecast }: { forecast: Tforecastday[] }) {
   }
 
   return (
-    <div className="h-[100dvh] bg-[#100E1D] text-white grid grid-cols-2 place-items-center px-4">
+    <div className="h-[100dvh] max-h-[1024px] min-h-[820px] bg-[#100E1D] text-white grid grid-cols-2 place-items-center p-4">
       {
         forecast.map((cast: Tforecastday, i: number) => {
           return (

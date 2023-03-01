@@ -56,7 +56,7 @@ function App() {
 
   return (
     <div
-      className='custom:grid custom:grid-cols-2 place-items-center w-full max-w-6xl'
+      className='custom:grid custom:grid-cols-2 place-items-center w-full max-w-6xl h-screen max-h-[1440px] drop-shadow-app'
     >
       { render &&  
         <>

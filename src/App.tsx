@@ -68,6 +68,12 @@ function App() {
               forecast={ allForecast() }
             />
           </div>
+          <p className="text-white self-start text-xs p-4 max-custom:pt-8">
+      This project was made by Vitor Veloso - vitorvelosodev - GitHub Repository: <a href="https://github.com/vitorvelosodev/weatherApp">https://github.com/vitorvelosodev/weatherApp</a>
+          </p>
+          <p className="text-white self-start text-xs p-4 max-custom:pt-0">
+          Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
+          </p>
         </>
       }
     </div>

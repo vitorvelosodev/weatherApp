@@ -7,6 +7,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'custom': '820px',
+    },
     extend: {
       keyframes: {
         scrolling: {

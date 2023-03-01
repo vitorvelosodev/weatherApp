@@ -53,7 +53,7 @@ export default function AnimationWeather(props: AnimationProps) {
     <>
       {
         animationElement !== Clear ?
-          <div className='absolute h-full overflow-hidden'>
+          <div className='absolute h-full overflow-hidden w-full'>
             <img src={objWeatherImg.CloudBackground} className='relative top-28 opacity-10 scale-150 overflow-x-hidden animate-scrolling' />
             <img src={objWeatherImg.CloudBackground} className='relative top-[-70px] opacity-0 scale-110 overflow-x-hidden animate-scrollingDelay' />
           </div>

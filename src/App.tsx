@@ -3,13 +3,14 @@ import { fetchApiData } from './scripts/api-request'
 import dataStd from './scripts/newAPIresponse.json'
 import MainWeatherScreen from './components/MainWeatherScreen/MainWeatherScreen'
 import { Context } from './context/Context'
+import Forecast from './components/Forecast/Forecast'
 
 function App() {
   const [ data , setData ] = useState(dataStd)
 
   const [ render, setRender ] = useState(false)
 
-  const allWeatherData = () => {    
+  const allWeatherDataMain = () => {    
     const location = data.location.name
     const temperature = data.current.temp_c
     const weatherCode = data.current.condition.code
@@ -29,6 +30,18 @@ function App() {
     )
   }
 
+  const allForecast = () => {
+    const allData = data.forecast.forecastday.map(forecast => {
+      return (
+        {
+          date: forecast.date,
+          day: forecast.day,
+        }
+      )
+    })
+    return allData
+  }
+
   const { city } = useContext(Context)
 
   const call = async () => {
@@ -43,10 +56,15 @@ function App() {
 
   return (
     <>
-      { render &&   
+      { render &&  
+        <>
           <MainWeatherScreen
-            {...allWeatherData()}
+            { ...allWeatherDataMain() }
           />
+          <Forecast
+            forecast={ allForecast() }
+          />
+        </>
       }
     </>
   )

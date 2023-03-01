@@ -1,6 +1,6 @@
-import { SyntheticEvent, useContext, useState } from 'react'
+import axios from 'axios'
+import { SyntheticEvent, useContext, useEffect, useState } from 'react'
 import { Context } from '../../context/Context'
-import worldCityListJSON from './../../cities/worldcities.json'
 import { TCity } from './../../types/type'
 
 type PropsMenu = {
@@ -17,6 +17,10 @@ export default function LocationMenu(props: PropsMenu) {
   const [ inputCity, setInputCity ] = useState<string>('')
   const [ searchList, setSearchList ] = useState<null | TCity[]>(null)
 
+  useEffect(() => {
+    setSearchList(null)
+  }, [open])
+
   const handleCityChange = (event: SyntheticEvent) => {
     const target = event.target as Element
     setCity(target.innerHTML)
@@ -25,19 +29,18 @@ export default function LocationMenu(props: PropsMenu) {
   function handleInputCityChange(event: React.ChangeEvent<HTMLInputElement>):void {
     const { value } = event.target
     setInputCity(value)
-    setTimeout(() => {
-      const worldCityList = worldCityListJSON as Array<TCity>
-      const worldCities = worldCityList.filter(city => {
-        const cityElement = city.city_ascii
-        const search = value
-        return cityElement.toLowerCase().includes(search.toLowerCase())
-      })
-      setSearchList(worldCities)
-    }, 800)
+    if (value.length > 3) {
+      setTimeout(async () => {
+        const apiKey = import.meta.env.VITE_API_KEY
+        const { data } = await axios(`https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${value}`)
+        setSearchList(data)
+      }, 600)
+    } else {
+      setSearchList(null)
+    }
   }
 
   function addNewCityToList(cityMapped: string):void {
-    console.log('cheguei aqui')
     setInputCity('')
     const cityIsRepeated = cityList.some(city => city === cityMapped)
     if (!cityIsRepeated) {
@@ -77,10 +80,10 @@ export default function LocationMenu(props: PropsMenu) {
                   return (
                     <div
                       key={i}
-                      onClick={ () => addNewCityToList(city.city_ascii) }
+                      onClick={ () => addNewCityToList(city.name) }
                       className='cursor-pointer py-2 px-4 border border-slate-600 hover:border-white'
                     >
-                      <p>{`${city.city_ascii} - ${city.admin_name} - ${city.country}`}</p>
+                      <p>{`${city.name} - ${city.region} - ${city.country}`}</p>
                     </div>
                   )
                 }))

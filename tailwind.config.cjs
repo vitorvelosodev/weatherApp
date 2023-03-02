@@ -24,16 +24,21 @@ module.exports = {
           '0%': { translate: '-100%', opacity: '0' },
           '50%': { opacity: '0.08' },
           '100%': { translate: '100%', opacity: '0' },
+        },
+        revealUp: {
+          '0%': { transform: 'translateY(10%)' , opacity: '0'},
+          '100%': { transform: 'translateY(0%)' , opacity: '1' },
         }
       },
       animation: {
         scrolling: 'scrolling 15s linear infinite',
         scrollingDelay: 'scrollingDelay 18s 3500ms linear infinite',
+        revealUp: 'revealUp 500ms ease-out'
       }
     },
     fontFamily: {
       'custom': ['Raleway', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

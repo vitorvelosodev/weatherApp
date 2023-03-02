@@ -5,7 +5,8 @@ import CloudBackground from '/weather-img/Cloud-background.png'
 import Hail from '/weather-img/Hail.png'
 import HeavyCloud from '/weather-img/HeavyCloud.png'
 import HeavyRain from '/weather-img/HeavyRain.png'
-import LightCloud from '/weather-img/LightRain.png'
+import LightCloud from '/weather-img/LightCloud.png'
+import LightRain from '/weather-img/LightRain.png'
 import Shower from '/weather-img/Shower.png'
 import Sleet from '/weather-img/Sleet.png'
 import Snow from '/weather-img/Snow.png'
@@ -27,18 +28,12 @@ export default function AnimationWeather(props: AnimationProps) {
     HeavyCloud,
     HeavyRain,
     LightCloud,
+    LightRain,
     Shower,
     Sleet,
     Snow,
     Thunderstorm
   }
-
-  // const weatherDescription = weatherCodesJSON.codes.condition.filter(code => code.code === weatherCode)[0].description
-  
-  // function getIcon() {
-  //   const animation = Object.entries(weatherAnimation).filter(entry => entry[0] === weatherDescription)
-  //   return animation[0][1]
-  // }
 
   function getIcon() {
     const animation = weatherCodesJSON.codes.condition.filter(code => code.code === weatherCode)[0].animation

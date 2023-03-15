@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
-import { fetchApiData } from './scripts/api-request'
+import { fetchApiData } from '/.netlify/functions/api-request'
 import dataStd from './scripts/newAPIresponse.json'
 import MainWeatherScreen from './components/MainWeatherScreen/MainWeatherScreen'
 import { Context } from './context/Context'

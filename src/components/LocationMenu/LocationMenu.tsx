@@ -31,8 +31,7 @@ export default function LocationMenu(props: PropsMenu) {
     setInputCity(value)
     if (value.length > 3) {
       setTimeout(async () => {
-        const apiKey = import.meta.env.VITE_API_KEY
-        const { data } = await axios(`https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${value}`)
+        const { data } = await axios.get(`/.netlify/functions/fetchCityName?city=${value}`)
         setSearchList(data)
       }, 600)
     } else {

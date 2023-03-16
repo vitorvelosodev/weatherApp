@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from 'react'
-import { fetchApiData } from './scripts/api-request'
 import dataStd from './scripts/newAPIresponse.json'
 import MainWeatherScreen from './components/MainWeatherScreen/MainWeatherScreen'
 import { Context } from './context/Context'
 import Forecast from './components/Forecast/Forecast'
+import { fetchApiData } from './scripts/apiRequest'
 
 function App() {
   const [ data , setData ] = useState(dataStd)
@@ -45,7 +45,8 @@ function App() {
   const { city } = useContext(Context)
 
   const call = async () => {
-    const newWeather = await fetchApiData(city)
+    const newWeather = (await fetchApiData(city))
+
     if (newWeather.data === null) {
       setApiError(true)
     } else {
@@ -84,17 +85,11 @@ function App() {
             <MainWeatherScreen
               { ...allWeatherDataMain() }
             />
-            <div className='grid place-items-center bg-[#100E1D] w-full'>
+            <div className='h-screen grid place-items-center bg-[#100E1D] w-full'>
               <Forecast
                 forecast={ allForecast() }
               />
             </div>
-            <p className="text-white self-start text-xs p-4">
-        This project was made by Vitor Veloso - vitorvelosodev - GitHub Repository: <a href="https://github.com/vitorvelosodev/weatherApp">https://github.com/vitorvelosodev/weatherApp</a>
-            </p>
-            <p className="text-white self-start text-xs p-4 max-custom:pt-0">
-            Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
-            </p>
           </>
         </div>
         :

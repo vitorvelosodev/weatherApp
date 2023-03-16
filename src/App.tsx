@@ -85,7 +85,7 @@ function App() {
             <MainWeatherScreen
               { ...allWeatherDataMain() }
             />
-            <div className='grid place-items-center bg-[#100E1D] w-full'>
+            <div className='h-screen grid place-items-center bg-[#100E1D] w-full'>
               <Forecast
                 forecast={ allForecast() }
               />

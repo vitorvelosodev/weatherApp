@@ -70,7 +70,7 @@ export default function Forecast({ forecast }: { forecast: Tforecastday[] }) {
 
   return (
     <div className="h-screen max-h-[1024px] min-h-[820px] bg-[#100E1D] text-white p-4 px-2 w-full flex flex-col">
-      <div className='h-[60%] w-[100%] grid grid-cols-2 place-items-center flex-auto'>
+      <div className='h-[70%] w-[100%] grid grid-cols-2 place-items-center flex-auto'>
         {
           forecast.map((cast: Tforecastday, i: number) => {
             return (
@@ -86,6 +86,7 @@ export default function Forecast({ forecast }: { forecast: Tforecastday[] }) {
           })
         }
       </div>
+      <hr />
       <div className='grid place-items-center justify-items-center flex-grow'>
         <div className='p-5'>
           <p className="text-white self-start text-xs p-4">

@@ -69,21 +69,33 @@ export default function Forecast({ forecast }: { forecast: Tforecastday[] }) {
   }
 
   return (
-    <div className="h-screen max-h-[1024px] min-h-[820px] bg-[#100E1D] text-white grid grid-cols-2 place-items-center p-4 px-2 w-full">
-      {
-        forecast.map((cast: Tforecastday, i: number) => {
-          return (
-            <div
-              key={`${cast} - ${i}`}
-              className='bg-[#1E213A] w-44 h-60 grid place-items-center p-4'
-            >
-              { isTomorrow(cast, i) }
-              { forecastImageAndText(cast) }
-              { forecastTemp(cast) }
-            </div>
-          )
-        })
-      }
+    <div className="h-screen max-h-[1024px] min-h-[820px] bg-[#100E1D] text-white p-4 px-2 w-full flex flex-col">
+      <div className='h-[60%] w-[100%] grid grid-cols-2 place-items-center flex-auto'>
+        {
+          forecast.map((cast: Tforecastday, i: number) => {
+            return (
+              <div
+                key={`${cast} - ${i}`}
+                className='bg-[#1E213A] w-44 h-60 grid place-items-center p-4'
+              >
+                { isTomorrow(cast, i) }
+                { forecastImageAndText(cast) }
+                { forecastTemp(cast) }
+              </div>
+            )
+          })
+        }
+      </div>
+      <div className='grid place-items-center justify-items-center flex-grow'>
+        <div className='p-5'>
+          <p className="text-white self-start text-xs p-4">
+            This project was made by Vitor Veloso - vitorvelosodev - GitHub Repository: <a href="https://github.com/vitorvelosodev/weatherApp">https://github.com/vitorvelosodev/weatherApp</a>
+          </p>
+          <p className="text-white self-start text-xs p-4 max-custom:pt-0">
+                Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
